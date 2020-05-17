@@ -1,0 +1,20 @@
+- Create virtual environment
+  - pip3 install pipenv
+  - 'pipenv install' to set up virtual environment
+  - to enter virtual environment:
+    - pipenv shell 
+    - 'exit' to get out
+
+- pipenv install flask
+
+to run app
+    export FLASK_APP=app
+    flask run
+
+export FLASK_ENV=development
+export FLASK_APP=app.py
+
+heroku config:set FLASK_APP=app.py
+
+
+web: gunicorn -b :$PORT app:app
